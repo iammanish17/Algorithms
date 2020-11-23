@@ -1,3 +1,6 @@
+# Binary Search VS Linear Search
+
+
 As we can judge from the time complexities, Binary search is the go to method for a sorted array.
 
 The GIF belows visualises Binary-Search and Linear-Search side by side on the same array. Hope, this gives you an idea of the algorithms efficiency.

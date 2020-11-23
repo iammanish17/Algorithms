@@ -61,22 +61,28 @@ As mentioned earlier, Binary Search is the fastest algorithm with the time compl
 
 As we keep dividing the array to half it's current size at each iteration, thus the size of the array decreases logarithmically. 
 
-At iteration 1:
+**At 1st iteration**
 
-> length = n
+length = n
 
-At iteration 2:
+**At 2nd iteration**
 
-> lemght = n/2
+length = \\( \frac{x}{2} \\)
 
-At iteration 3:
+**At 3rd iteration**
 
-> lenght = (n/2)/2 = n/4
+length = \\(\frac{x}{2}*\frac{1}{2} = \frac{x}{4}\\)
 
-At iteration k:
+.
+.
+.
 
-> lenght = 1;
-> Or lenght = n / ( 2 ^ ( k - 1 ) ) = log<sub>2</sub>n
+
+**At k-th iteration**
+
+length = \\( \frac{n}{2^{k-1}} \\)
+
+So, maximum number of interations will be \\( \log_2{n} \\)
 
 ## Practice Probelms
 

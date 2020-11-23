@@ -19,7 +19,7 @@ First determine the left and right ends of the array
 > left = 0, right = 9 [n(size of array) - 1]
 > <p>Thus, mid1 = left + ( right - left ) / 3, and</p>
 > <p>mid2 = mid1 + ( right - left ) / 3</p>
-
+> 
 ><p>left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mid1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mid2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right</p> 
 > \/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/
 > <p>1 &nbsp;&nbsp; | &nbsp;&nbsp; 2 &nbsp;&nbsp; | &nbsp;&nbsp; 3 &nbsp;&nbsp; | &nbsp;&nbsp; 4 &nbsp;&nbsp; | &nbsp;&nbsp; 5 &nbsp;&nbsp; | &nbsp;&nbsp; 6 &nbsp;&nbsp; | &nbsp;&nbsp; 7 &nbsp;&nbsp; | &nbsp;&nbsp; 8 &nbsp;&nbsp; | &nbsp;&nbsp; 9 &nbsp;&nbsp; | &nbsp;&nbsp; 10</p>
@@ -66,28 +66,34 @@ int ternarySearch(int arr[], int n,int l,int r int x){
 
 ## Time Complexity
 
-Ternary Search is faster than Binary Search, as it also works in logarithamic complexity but the base is 3, `O(log<sub>3</sub>n)`. But it is not as widely used as binary search.
+Ternary Search is faster than Binary Search, as it also works in logarithamic complexity but the base is 3, O(log<sub>3</sub>n). But it is not as widely used as binary search.
 
 As we keep dividing the array to one-third it's current size at each iteration, thus the size of the array decreases logarithmically. 
 
-At iteration 1:
+**At 1st iteration**
 
-> length = n
+length = n
 
-At iteration 2:
+**At 2nd iteration**
 
-> lemght = n/3
+length = \\( \frac{x}{3} \\)
 
-At iteration 3:
+**At 3rd iteration**
 
-> lenght = (n/3)/3 = n/9
+length = \\(\frac{x}{3}*\frac{1}{3} = \frac{x}{9}\\)
 
-At iteration k:
+.
+.
+.
 
-> lenght = 1;
-> Or lenght = n / ( 3 ^ ( k - 1 ) ) = log<sub>3</sub>n
 
-# Practice Problem
+**At k-th iteration**
+
+length = \\( \frac{n}{3^{k-1}} \\)
+
+So, maximum number of interations will be \\( \log_3{n} \\)
+
+## Practice Problem
 
 [Weakness and Poorness](https://codeforces.com/problemset/problem/578/C)
 
